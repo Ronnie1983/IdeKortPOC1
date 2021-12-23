@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31815.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdeKortAPI", "IdeKortAPI\IdeKortAPI.csproj", "{24CACF21-FAE9-4690-8D32-B0C0EBE93F91}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdeKortLib", "IdeKortLib\IdeKortLib.csproj", "{2620B6E4-9ED7-4137-84E0-D95A795F85DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexToDec", "HexToDec\HexToDec.csproj", "{6DF1A504-B210-4845-9DA6-82B058B79B1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexToDec", "HexToDec\HexToDec.csproj", "{6DF1A504-B210-4845-9DA6-82B058B79B1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{99E0B4AD-4A40-4191-8615-7416B9453B50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6DF1A504-B210-4845-9DA6-82B058B79B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DF1A504-B210-4845-9DA6-82B058B79B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DF1A504-B210-4845-9DA6-82B058B79B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E0B4AD-4A40-4191-8615-7416B9453B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E0B4AD-4A40-4191-8615-7416B9453B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E0B4AD-4A40-4191-8615-7416B9453B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E0B4AD-4A40-4191-8615-7416B9453B50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

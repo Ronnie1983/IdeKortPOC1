@@ -16,15 +16,8 @@ namespace ConsoleApp1
 {
     class start
     {
-        //public static UsbDevice MyUsbDevice;
-
-        //public static UsbDeviceFinder MyUsbFinder = new UsbDeviceFinder(1234, 1);
-
         private ConnectionGeneric<Chip> mgrChip = new ConnectionGeneric<Chip>();
-        //private ConnectionGeneric<Product> mgrProduct = new ConnectionGeneric<Product>();
         private ConnectionGeneric<Amount> mgrAmount = new ConnectionGeneric<Amount>();
-
-
         public async Task go()
         {
             Chip chip;
@@ -35,17 +28,14 @@ namespace ConsoleApp1
             bool inMenu;
             int count = 1;
             int count2 = 1;
-          
             while (true)
             {
                 chip = new Chip();
                 Console.WriteLine("------------------------------------");
                 Console.WriteLine("Please scan chip");
-                
                 chip = await ScanChip(Console.ReadLine());
                 Console.WriteLine($"Scannet details:" + chip);
                 Console.WriteLine("------------------------------------");
-
                 if (chip.Id != 0)
                 {
                     amounts = await mgrAmount.GetItemByCip(chip.Id);
@@ -65,19 +55,15 @@ namespace ConsoleApp1
                             }
                             Console.WriteLine("------------------------------------");
                             string readstring = "p";
-                            
                             while (!Int32.TryParse(readstring, out selectedNumber))
                             {
                                 Console.WriteLine("Only numbers");
                                 readstring = Console.ReadLine();
                             }
-                            
                             if (selectedNumber < productNumber && selectedNumber >= 0)
                             {
                                 selectedAmount = amounts[selectedNumber];
-
                                 Console.WriteLine(selectedAmount);
-                                
                                 readstring = "p";
                                 while (!Int32.TryParse(readstring,out count2) && count2 !<= selectedAmount.Total)
                                 {
@@ -87,8 +73,6 @@ namespace ConsoleApp1
                                 }
                                 if (count2 <= selectedAmount.Total && count2 > 0 && count2 < 500)
                                 {
-                                    
-
                                     readstring = "p";
                                     while (!Int32.TryParse(readstring, out count))
                                     {
@@ -130,14 +114,9 @@ namespace ConsoleApp1
                                         Console.WriteLine("------------------------------------");
                                         Console.WriteLine("Not enough, try again");
                                     }
-                                  
-                                    
                                 }
-
                                 count = 1;
                                 count2 = 1;
-
-
                             }
                             else if (selectedNumber == chip.Id)
                             {
@@ -164,7 +143,6 @@ namespace ConsoleApp1
                             Console.WriteLine("Something went wrong2");
                         }
                     }
-                    
                 }
                 else
                 {
@@ -173,7 +151,6 @@ namespace ConsoleApp1
                 }
             }
         }
-
         private async Task<Chip> ScanChip(string key)
         {
             if (int.TryParse(key, out int j))
